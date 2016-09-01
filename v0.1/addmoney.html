@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>环球交易</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="static/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="static/css/index.css"/>
+
+</head>
+<body>
+<div class="page-group" id="addmoney_page">
+    <div class="page">
+
+        <header class="bar bar-nav">
+            <a class=" icon icon-left pull-left j_back" href="#" ></a>
+            <h1 class="title">账户充值</h1>
+        </header>
+
+        <div class="content">
+            <div class="mycard">
+                <div class="card-header" style="background-color: white">
+                    <span class="user_icon"><img src="static/images/user.png" alt=""/></span>
+
+                    <div>
+                        <span>可用资产：</span>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="card-content" style="background-color: white">
+                    <div class="card-content-inner">
+                        <div class="item-inner mar row">
+                            <div class="item-title label w2 col-44" >持卡人：</div>
+                            <span class="item-input">
+                                1231232
+                            </span>
+                        </div>
+                        <div class="item-inner mar row">
+                            <div class="item-title label w2 col-44" >银行卡：</div>
+                            <span class="item-input">
+                                123123
+                            </span>
+                        </div>
+                        <div class="item-inner mar row">
+                            <div class="item-title label w3 col-44" style="margin-right: 0.4rem" >银行卡号：  </div>
+                            <span class="item-input">
+                                12312
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mycard">
+                <div class="card-header" style="background-color: white">
+                    <ul class="money-value">
+                        <li class="">充值金额</li>
+                        <li class="" id="value_box">
+                            <span class="">10元</span>
+                            <span>100元</span>
+                            <span>500元</span>
+                            <span>1000元</span>
+                            <span>2000元</span>
+                            <span>5000元</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-header" style="background-color: white">
+                    <ul class="money-value">
+                        <li class="">其他金额</li>
+                        <li class="input-value" id="addmoney_value">
+                            <input type="number" placeholder="最小金额为10元" aria-valuemin="10" pattern="[1-9]/d+" id="addmoney_value_num"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mycard payment">
+                <div class="card-header" id="addmoney_JDpay">
+                    <i>
+                        <img src="static/images/pay_jd.png" alt=""/>
+                    </i>
+                    <i>
+                        京东支付
+                    </i>
+                </div>
+                <div class="card-header payment" id="addmoney_YLpay">
+                    <i>
+                        <img src="static/images/pay_yl.png" alt=""/>
+                    </i>
+                    <i>
+                        银联支付
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="static/libs/vue.min.js" charset='utf-8'></script>
+<script src="static/libs/swiper-3.3.1.min.js"></script>
+<script src="static/js/addmoney.js"></script>
+<script src="static/js/pageLogin.js"></script>
+
+</body>
+</html>

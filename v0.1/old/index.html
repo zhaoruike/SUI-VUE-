@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>中海微盘手机版</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+  <link rel="stylesheet" href="static/css/index.css"/>
+</head>
+<body>
+<div class="page-group">
+  <div class="page" id="app">
+    <header class="bar bar-nav">
+      <a class="icon icon-me pull-left open-panel" data-panel='#panel-left-demo'></a>
+      <h1 class="title">中海微盘</h1>
+    </header>
+    <nav class="bar bar-tab">
+      <a class="tab-item active" href="#">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">首页</span>
+      </a>
+      <a class="tab-item" href="login1.html" name="me">
+        <span class="icon icon-me" name="me"></span>
+        <span class="tab-label" name="me">我</span>
+      </a>
+      <a class="tab-item" href="#">
+        <span class="icon icon-star"></span>
+        <span class="tab-label">行情</span>
+      </a>
+      <a class="tab-item" href="#">
+        <span class="icon icon-settings"></span>
+        <span class="tab-label">充值</span>
+      </a>
+    </nav>
+    <div class="content">
+      <div class="buttons-tab">
+        <a href="#tab1" class="tab-link active button">油</a>
+        <a href="#tab2" class="tab-link button">银</a>
+      </div>
+      <div class="content-block">
+        <div class="tabs">
+          <div id="tab1" class="tab active">
+            <div class="content-padded grid-demo">
+              <div class="row">
+                <div class="col-50">中海油（元/桶）</div>
+                <div class="col-50">CON</div>
+              </div>
+              <div class="row">
+                <div class="col-20">昨收：</div>
+                <div class="col-30" v-text="conLastdayPrice"></div>
+                <div class="col-20">今开：</div>
+                <div class="col-40" v-text="conTodayPrice"></div>
+              </div>
+              <h3 v-text="conPrice"></h3>
+              <div class="row">
+                <div class="col-20" v-text="conChange"></div>
+                <div class="col-80" v-text="conScale"></div>
+              </div>
+            </div>
+            <div class="list-block">
+              <ul>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title"><a href="order.html" >买多</a></div>
+                    中海油1桶<br/>8元/1手
+                    <div class="item-after">卖空</div>
+                  </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">买多</div>
+                    中海油30桶<br/>200元/手
+                    <div class="item-after">卖空</div>
+                  </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">买多</div>
+                    中海油75桶<br/>500元/手
+                    <div class="item-after">卖空</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="tab2" class="tab">
+            <div class="content-padded grid-demo">
+              <div class="row">
+                <div class="col-50">中海银（元/千克）</div>
+                <div class="col-50">Ag</div>
+              </div>
+              <div class="row">
+                <div class="col-20">昨收：</div>
+                <div class="col-30" v-text="agLastdayPrice"></div>
+                <div class="col-20">今开：</div>
+                <div class="col-40" v-text="agTodayPrice"></div>
+              </div>
+              <h3 v-text="agPrice"></h3>
+              <div class="row">
+                <div class="col-20" v-text="agChange"></div>
+                <div class="col-80" v-text="agScale"></div>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">买多</div>
+                      中海银500g<br/>30元/1手
+                      <div class="item-after">卖空</div>
+                    </div>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">买多</div>
+                      中海银4kg<br/>300元/手
+                      <div class="item-after">卖空</div>
+                    </div>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">买多</div>
+                      中海银7.5kg<br/>500元/手
+                      <div class="item-after">卖空</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-padded grid-demo">
+        <div class="row">
+          <div class="col-25">商品</div>
+          <div class="col-20">方向</div>
+          <div class="col-15">手数</div>
+          <div class="col-20">盈亏</div>
+          <div class="col-20">操作</div>
+        </div>
+        <h4></h4>
+        <div class="row">
+          <div class="col-25">中海油1桶</div>
+          <div class="col-20">涨</div>
+          <div class="col-15">1手</div>
+          <div class="col-20">2(20%)</div>
+          <div class="col-20"><a href="#" class="button button-danger">平仓</a></div>
+        </div>
+        <div class="row">
+          <div class="col-25">中海油1桶</div>
+          <div class="col-20">涨</div>
+          <div class="col-15">1手</div>
+          <div class="col-20">2(20%)</div>
+          <div class="col-20"><a href="#" class="button button-danger">平仓</a></div>
+        </div>
+        <div class="row">
+          <div class="col-25">中海油1桶</div>
+          <div class="col-20">涨</div>
+          <div class="col-15">1手</div>
+          <div class="col-20">2(20%)</div>
+          <div class="col-20"><a href="#" class="button button-danger">平仓</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="charts" style="width:350px;"></div>
+  </div>
+  <div class="panel panel-left panel-reveal theme-dark" id='panel-left-demo'>
+    <div class="content-block">
+      <p>可用资产：100元</p>
+      <p>体验金：200元</p>
+      <p>实时盈亏：0元</p>
+      <p>交易单数：1</p>
+      <p><a href="#" class="close-panel">关闭</a></p>
+    </div>
+    <div class="list-block">
+      <!-- .... -->
+    </div>
+  </div>
+</div>
+
+<script src="//g.alicdn.com/sj/lib/zepto/zepto.min.js"></script>
+<script src="//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js"></script>
+<script src="//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js"></script>
+<script src="static/libs/vue.min.js"></script>
+<script src="static/libs/echarts.js"></script>
+<script src="static/js/common.js"></script>
+<script src="static/js/index.js"></script>
+<script src="static/js/login.js"></script>
+<script type="text/javascript">
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      conPrice: '',
+      conLastdayPrice: '',
+      conTodayPrice: '',
+      conChange: '',
+      conScale: '',
+      agPrice: '',
+      agLastdayPrice: '',
+      agTodayPrice: '',
+      agChange: '',
+      agScale: '',
+      conPriceDir: '',
+      conPriceCss: '',
+      conPriceImg: '',
+      agPriceDir: '',
+      agPriceCss: '',
+      agPriceImg: ''
+    },
+    watch: {
+      latestDir: function(val){
+        this.latestDirCss = val == 'U' ? 'price-up' : 'price-down';
+      },
+      changePrice: function(val){
+        this.changePriceCss = val >= 0 ? 'price-up' : 'price-down';
+        this.changeScaleCss = this.changePriceCss;
+      },
+      conPriceDir: function(val){
+        this.conPriceCss = val == 'U' ? 'price-up' : 'price-down';
+        this.conPriceImg = val == 'U' ? 'price-up-img-sm' : 'price-down-img-sm';
+      },
+      agPriceDir: function(val){
+        this.agPriceCss = val == 'U' ? 'price-up' : 'price-down';
+        this.agPriceImg = val == 'U' ? 'price-up-img-sm' : 'price-down-img-sm';
+      }
+    }
+  });
+  base.index();
+
+</script>
+</body>
+</html>

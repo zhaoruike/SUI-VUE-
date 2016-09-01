@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>K线</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+  <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+  <link rel="stylesheet" href="static/css/swiper-3.3.1.min.css">
+  <link rel="stylesheet" href="static/css/index.css"/>
+</head>
+<body>
+<div class="page-group" id="kline_page">
+<div class="page">
+<header class="bar bar-nav">
+  <a class="icon icon-left pull-left j_back"></a>
+  <h1 class="title" v-text="item.name"></h1>
+</header>
+<div class="content">
+<div class="list-block">
+  <ul>
+    <li class="item-content">
+      <div class="item-inner">
+        <div class="item-title">最新价格</div>
+        <div class="item-after" v-text="price.price[0]"></div>
+      </div>
+    </li>
+    <li class="item-content">
+      <div class="item-inner">
+        <div class="item-title">今开</div>
+        <div class="item-after" v-text="price.todayOpen[0]"></div>
+      </div>
+    </li>
+    <li class="item-content">
+      <div class="item-inner">
+        <div class="item-title">昨收</div>
+        <div class="item-after" v-text="price.lastClose[0]"></div>
+      </div>
+    </li>
+    <li class="item-content">
+      <div class="item-inner">
+        <div class="item-title">最高</div>
+        <div class="item-after" v-text="price.highest[0]"></div>
+      </div>
+    </li>
+    <li class="item-content">
+      <div class="item-inner">
+        <div class="item-title">最低</div>
+        <div class="item-after" v-text="price.lowest[0]"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="//g.alicdn.com/sj/lib/zepto/zepto.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="static/libs/vue.min.js" charset="utf-8"></script>
+<script src="static/libs/swiper-3.3.1.min.js"></script>
+<script src="static/js/login.js"></script>
+<script src="static/js/pageLogin.js"></script>
+</body>
+</html>

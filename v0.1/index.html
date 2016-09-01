@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>环球交易</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <!--<link rel="stylesheet" href="static/css/sm.min.css"/>-->
+    <!--<link rel="stylesheet" href="static/css/sm-extend.min.css"/>-->
+    <link rel="stylesheet" href="static/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="static/css/index.css"/>
+</head>
+<body>
+<nav class="bar bar-tab" style="position: absolute;bottom: 0;z-index: 9999; width: 20rem;margin: 0 auto">
+    <a class="tab-item active" href="index.html" data-no-cache="true">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">首页</span>
+    </a>
+    <a class="tab-item" href="price.html" id="me" data-no-cache="true">
+        <span class="icon icon-computer" name="me"></span>
+        <span class="tab-label" name="me">行情</span>
+    </a>
+    <a class="tab-item" href="buy.html">
+        <span class="icon icon-browser"></span>
+        <span class="tab-label">交易</span>
+    </a>
+    <a class="tab-item" href="recharge.html">
+        <span class="icon icon-gift"></span>
+        <span class="tab-label">充值</span>
+    </a>
+    <a class="tab-item" href="user.html">
+        <span class="icon icon-me"></span>
+        <span class="tab-label">我</span>
+    </a>
+</nav>
+<div class="page-group">
+    <div class="page page-current" id="index_page">
+        <header class="bar bar-nav">
+            <h1 class="title">环球交易</h1>
+        </header>
+        <nav class="bar bar-tab">
+        </nav>
+        <div class="content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="val in focus">
+                        <a :href="val.address"><img :src="val.url"/></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div>
+                <div class="content-block-title">热门交易品</div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <a href="kline.html?type=CON" data-no-cache="true">
+                                <div class="item-inner">
+                                    <div class="item-title col-20">中海油（元/桶）</div>
+                                    <div class="item-title" v-text="Con.price"></div>
+                                    <div class="item-after">今：<span v-text="Con.todayOpen"></span>昨：<span
+                                            v-text="Con.lastClose"></span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item-content">
+                            <a href="kline.html?type=Ag" data-no-cache="true">
+                                <div class="item-inner">
+                                    <div class="item-title col-20">中海银（元/千克）</div>
+                                    <div class="item-title" v-text="Ag.price"></div>
+                                    <div class="item-after">今：<span v-text="Ag.todayOpen"></span>昨：<span
+                                            v-text="Ag.lastClose"></span></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-block-title">昨日盈利榜</div>
+            <div class="list-block">
+                <ul>
+                    <li class="item-content" v-for="val in winners">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">
+                                <div><img :src="val.url" width="50"></div>
+
+                            </div>
+                            <div class="item-title">
+                                <div v-text="val.name"></div>
+                            </div>
+                            <div class="item-title">
+                                <div><span v-html="val.profit"></span>元</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//g.alicdn.com/sj/lib/zepto/zepto.min.js"></script>
+<script src="//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js"></script>
+<script src="//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js"></script>
+<script type="text/javascript" src="//g.alicdn.com/msui/sm/0.6.2/js/sm-city-picker.min.js" charset="utf-8"></script>
+<script src="static/libs/vue.min.js"></script>
+<script src="static/libs/swiper-3.3.1.min.js"></script>
+<script src="static/js/common.js"></script>
+<script src="static/js/index.js"></script>
+<script src="static/js/price.js"></script>
+<script src="static/js/kline.js"></script>
+<script src="static/js/login.js"></script>
+<script src="static/js/bindcard.js"></script>
+<script src="static/js/register.js"></script>
+<script src="static/js/user.js"></script>
+<script src="static/js/addmoney.js"></script>
+<script src="static/js/findpass.js"></script>
+<script src="static/js/myactive.js"></script>
+<script src="static/js/withdraw.js"></script>
+<script src="static/js/mycard.js"></script>
+<script src="static/js/recode.js"></script>
+<script src="static/js/changepass.js"></script>
+</body>
+</html>

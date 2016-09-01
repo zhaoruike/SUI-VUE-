@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>环球交易</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="static/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="static/css/index.css"/>
+
+</head>
+<body>
+
+<div class="page-group">
+    <div class="page page-current" id="bindCord_page">
+        <!-- 标题-->
+        <header class="bar bar-nav">
+            <a class=" icon icon-left pull-left back" href="#" style="color: white">
+            </a>
+
+            <h1 class="title" style="background-color: black ; color: white">环球贵金属</h1>
+        </header>
+        <div class="content">
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label w1">姓名</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入姓名" name="name" maxlength="4" id="bindcord_name">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-email"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label w2">身份证</div>
+                                <div class="item-input">
+                                    <input type="email" placeholder="请输入身份证" name="id"
+                                           pattern="/^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/" maxlength="18"
+                                           id="bindcord_id">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label w3">选择银行</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="点击选择银行" name="bank" id="bindcord_bank">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label w3">开户地区</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="点击选择开户地区" name="city" id="bindcord_city">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Date -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label w3">银行卡号</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入银行卡号" name="bankCord" pattern="/^\d{16}|\d{19}$/"
+                                           maxlength="19" id="bindcord_bankCord">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">预留手机号</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入手机号" name="ipone" pattern="^1[3|4|5|7|8]\d{9}$"
+                                           maxlength="11" id="bindcord_phone">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <input type="submit" class="button button-fill button-success button-big button-round" value="完成"
+                       id="bindcord_submit"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="static/libs/vue.min.js" charset='utf-8'></script>
+<script src="static/libs/swiper-3.3.1.min.js"></script>
+<script src="static/js/bindCord.js"></script>
+<script src="static/js/pageLogin.js"></script>
+
+</body>
+</html>

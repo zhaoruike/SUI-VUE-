@@ -1,0 +1,91 @@
+<div class="page-group" id="register_page">
+    <header class="bar bar-nav">
+        <h1 class='title'>用户注册</h1>
+    </header>
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="../index.html" id="index">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item" href="../login.html" id="me" name="me">
+            <span class="icon icon-me"></span>
+            <span class="tab-label">我</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-star"></span>
+            <span class="tab-label">行情</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-settings"></span>
+            <span class="tab-label">充值</span>
+        </a>
+    </nav>
+    <div class="content">
+        <div class="list-block">
+            <form>
+                <ul>
+                    <!-- Text inputs -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入手机号" pattern="^1\d{10}" maxlength="11">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" placeholder="请输入密码" pattern="[A-Zz-a1-9]{10,16}"
+                                           maxlength="16">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" placeholder="请输入密码" pattern="[A-Zz-a1-9]{10,16}"
+                                           maxlength="16">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" placeholder="请输入图形验证码" pattern="^/d{4}$" maxlength="4">
+                                    <span style="width: 20%;height: 70%;background: green ;position: absolute;bottom: 0.2rem;right: 4rem" >1234</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" placeholder="请输入手机验证码" pattern="^/d{4,6}$" maxlength="6">
+                                    <span style="width: 20%;height: 70%;background: green ;position: absolute;bottom: 0.2rem;right: 4rem;border-radius: 0.1rem" id="get_code">获取验证码</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <p>
+                    <input type="checkbox" value="1" id="agree"/>
+                    <span>已经阅读</span>
+                    <a href="">《风险提示》</a>
+                    <span>以及</span>
+                    <a href="">《免费声明》</a>
+                </p>
+                <div class="content-block">
+                    <input type="submit" class="button button-success button-fill button-big" value="同意协议并注册"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

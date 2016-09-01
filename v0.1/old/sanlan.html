@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body {
+            margin:0;
+            padding:0;
+            height: 100%;
+        }
+
+        #left,
+        #right {
+            position: absolute;
+            top:0;
+            width: 220px;
+            height: 100%;
+        }
+
+        #left {
+            left:0;
+        }
+
+        #right {
+            right:0;
+        }
+
+        #main {
+            margin: 0 230px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 200px;height: 200px;background-color: red"></div>
+<div style="width: 200px;height: 200px;background-color: green;float: right"></div>
+<div style="height: 200px;background-color: yellow">22222222222222222223333333</div>
+
+</body>
+<script>
+var len=10;
+    function fn(){
+        alert(this.len)
+    }
+    var obj={
+        len:5,
+        method:function(fn){
+            fn();
+            arguments[0]();
+        }
+    }
+    obj.method(fn)
+</script>
+</html>

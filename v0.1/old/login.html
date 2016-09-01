@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>用户登录</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0,target-densitydpi=high-dpi">
+<link rel="stylesheet" href="../static/css/login.css?rev=@@hash">
+<script src="../static/libs/jquery-1.11.3.js"></script>
+<script src="../static/libs/jquery.base64.js"></script>
+<script src="../static/libs/layer/layer.js"></script>
+<script src="../static/js/common.js?rev=@@hash"></script>
+<script src="login.js?rev=@@hash"></script>
+</head>
+<body style="background: #ECECEC;">
+<header>
+  <a href="../index.html"><i></i></a>
+  <h1>用户登录</h1>
+</header>
+<div class="pagewrap">
+  <section class="userSection">
+    <form action="" id="loginForm">
+      <div class="user_enter">
+        <input type="tel" id="mobile" placeholder="请输入手机号" autofocus required  pattern="^[1]\d{10}$" maxlength="11">
+      </div>
+      <div class="user_enter">
+        <input type="password" placeholder="请输入交易密码" required id="dealPwd" pattern="^[0-9]{6,}$" maxlength="6" />
+      </div>
+      <div class="log_btn">
+        <a name="提交" href="#nogo" id="btn_login">登 录</a>
+      </div>
+      <div class="register">
+        <a href="register.html">立即注册</a>
+      </div>
+      <div class="forPass">
+        <a href="findPass.html">忘记密码</a>
+      </div>
+  </form>
+</section>
+</div>
+</body>
+</html>
